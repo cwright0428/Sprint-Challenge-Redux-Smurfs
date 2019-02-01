@@ -15,7 +15,7 @@ class App extends Component {
     super();
     this.state = {
       name: '',
-      age: 100,
+      age: '',
       height: '',
     }
   }
@@ -33,7 +33,7 @@ class App extends Component {
     this.props.postSmurf(newSmurf);
     this.setState({
       name: '',
-      age: 100,
+      age: '',
       height: '',
     })
   }
@@ -56,9 +56,9 @@ class App extends Component {
             <div className="smurfInfo">
               {this.props.smurfs.map(smurf => {
                 return (<div key={smurf.name}>
-                  <h2>Name: {smurf.name}</h2>
-                  <p>age: {smurf.age}</p>
-                  <p>height: {smurf.height}</p>
+                  <h2>Name: {smurf.name} smurf</h2>
+                  <p>age: {smurf.age} years old</p>
+                  <p>height: {smurf.height} cm</p>
                 </div>)
               })}
             </div>
